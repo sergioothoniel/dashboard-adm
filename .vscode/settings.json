@@ -1,0 +1,51 @@
+{
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.comments.insertSpace": false,
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": false,
+  "editor.tabSize": 2,
+  "editor.useTabStops": false,
+  "[json]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 2,
+    "editor.useTabStops": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.format.insertSpaceAfterCommaDelimiter": true,
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
+  "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "typescript.format.insertSpaceAfterCommaDelimiter": false,
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.fixAll.eslint": "explicit"
+    },
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "eslint.workingDirectories": [
+    {
+      "directory": "main",
+      "!cwd": false
+    },
+    {
+      "directory": "resources",
+      "!cwd": false
+    }
+  ]
+}
