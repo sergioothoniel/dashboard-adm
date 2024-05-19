@@ -1,5 +1,12 @@
 import { EmployeesModel } from '../../models/employees'
 
+/**
+ * Lista os funcionários registrados no banco de dados
+ * @param page Página a ser retornada pela API
+ * @param itemsPerPage Númeor de itens que deve ter em cada página
+ * @returns Lista dos funcionário, página atual, número de página e
+ * total de funcionários
+ */
 async function listEmployeesService(
   page: number = 1,
   itemsPerPage: number = 20
@@ -20,6 +27,12 @@ async function listEmployeesService(
   }
 }
 
+/**
+ * Busca um determinado funcionário de acordo com seu ID
+ * @param id ID de identificação do funcionário
+ * @returns Dados do funcionario, null caso não exista para o ID ou
+ * um objeto com status 400 quando o ID buscado não estiver no padrão esperado
+ */
 async function getEmployeeService(id: string) {
   try {
     const response = await EmployeesModel.findById(id)
@@ -32,6 +45,11 @@ async function getEmployeeService(id: string) {
   }
 }
 
+/**
+ * Criar um novo funcionário na tabela
+ * @param employeeData Dados do novo funcionário
+ * @returns Funcionário criado
+ */
 async function createEmployeeService(employeeData: {
   nome: string
   cargo: string
@@ -47,6 +65,13 @@ async function createEmployeeService(employeeData: {
   }
 }
 
+/**
+ * Atualiza um ou mais dados do funcionário de acordo com seu ID
+ * @param id ID de identificação do funcionário
+ * @param employeeData Dados do funcionário
+ * @returns Funcionário atualizado, null caso não exista para o ID ou
+ * um objeto com status 400 quando o ID buscado não estiver no padrão esperado
+ */
 async function updateEmployeeService(
   id: string,
   employeeData: {
@@ -68,6 +93,12 @@ async function updateEmployeeService(
   }
 }
 
+/**
+ * Exclui um determinado funcionário pelo seu ID
+ * @param id ID de identificação
+ * @returns Funcionário excluído, null caso não exista para o ID ou
+ * um objeto com status 400 quando o ID buscado não estiver no padrão esperado
+ */
 async function deleteEmployeeService(id: string) {
   try {
     const response = await EmployeesModel.findByIdAndDelete(id)
